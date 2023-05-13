@@ -1,0 +1,19 @@
+.container{
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 12px;
+    width: 750px;
+    margin-bottom: 30px;
+
+    &:empty{
+        display: none;
+    }
+
+    p{
+        border: 2px solid #bbb;
+        padding: 10px;
+        cursor: default;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+}

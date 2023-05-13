@@ -1,0 +1,47 @@
+.container{
+    position: absolute;
+    border-radius: 12px;
+    background-color: #fff;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -70%);
+    z-index: 1000;
+
+    h4{
+        background-color: #40005d;
+        padding: 14px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 28px;
+        color: #fff;
+        border: none;
+    }
+
+    div{
+        padding: 12px;
+        height: 200px;
+        width: 450px;
+        font-size: 24px;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        p{
+            transform: translateY(25px);
+        }
+
+        button{
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            font-size: 21px;
+            background-color: #40005d;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+    }
+}
+

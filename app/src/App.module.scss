@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Arial', Arial, sans-serif;
+    
+    &::selection{
+        background-color: inherit;
+    }
+}
+
+body{
+    background-color: #222;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+
+    
+
+    & > *{
+        margin-top: 40px;
+    }
+}
+
