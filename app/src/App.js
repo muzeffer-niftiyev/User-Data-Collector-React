@@ -12,21 +12,27 @@ const App = () => {
   const [hasError, setHasError] = useState(false);
   const [message, setMessage] = useState('');
 
+  const invalidSymbols = /[?@#$%^&*!/]/
 
   const addNewData = (newData) => {
     if(newData.name === '' || newData.age === '' ){
       setHasError(true);
-      setMessage(`Please enter both your name and age.`)
+      setMessage(`Please enter both your name and age.`);
       return;
     };
-    console.log(newData);
-
-    if(newData.age <= 0 || typeof +newData.age !== 'number'){
-      console.log(typeof newData.age);
+    
+    if(newData.age <= 0 || newData.age > 200 || isNaN(newData.age)){
       setHasError(true);
       setMessage(`Please enter a valid age.`);
       return;
+    };
+
+    if(invalidSymbols.test(newData.name)){
+      setHasError(true);
+      setMessage(`You can't use (?, @, #, !, $, %, ^, /, &, *) in your name`);
+      return;
     }
+
     setItem((prev) => [newData, ...prev]);
   };
 
